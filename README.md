@@ -1,2 +1,5 @@
-# advent_of_code
-Advent of Code - coding challenge
+### Advent of Code
+
+Advent of Code is an Advent calendar of small programming puzzles for a variety of skill levels that can be solved in any programming language.
+
+https://adventofcode.com/
