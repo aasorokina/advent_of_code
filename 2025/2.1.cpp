@@ -10,20 +10,17 @@ int main() {
   std::stringstream stream(line);
   char symbol;
 
-  while (stream) {
-    stream >> first;
-    stream >> symbol;
-    stream >> second;
-    stream >> symbol;
+  while (stream >> first >> symbol >> second) {
 
     for (uint64_t i = first; i <= second; i++) {
       std::string strNum = std::to_string(i);
       int halfSize = strNum.size() / 2;
       if (strNum.size() % 2 == 0 &&
           strNum.substr(0, halfSize) == strNum.substr(halfSize, halfSize)) {
-        result += std::stoul(strNum);
+        result += i;
       }
     }
+    stream >> symbol;
   }
 
   std::cout << result << '\n';
