@@ -15,15 +15,15 @@ int main() {
       std::string strNum = std::to_string(i);
       int size = strNum.size();
 
-      for (int divider = size; divider > 1; divider--) {
+      for (int parts = size; parts > 1; parts--) {
         
-        if (size % divider == 0) {
-          int partSize = size / divider;
+        if (size % parts == 0) {
+          int partSize = size / parts;
           std::string prevStr = strNum.substr(0, partSize);
           bool equalStrings = true;
 
-          for (int j = partSize; j < size; j += partSize) {
-            std::string str = strNum.substr(j, partSize);
+          for (int pos = partSize; pos < size; pos += partSize) {
+            std::string str = strNum.substr(pos, partSize);
 
             if (str != prevStr) {
               equalStrings = false;
